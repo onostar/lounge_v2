@@ -339,6 +339,8 @@ function addItem(){
      let department = document.getElementById("department").value;
      let item_category = document.getElementById("item_category").value;
      let item = document.getElementById("item").value;
+     let photo = document.getElementById("photo").value;
+
      // let barcode = document.getElementById("barcode").value;
      if(item_category.length == 0 || item_category.replace(/^\s+|\s+$/g, "").length == 0){
           alert("Please select item category!");
@@ -348,15 +350,26 @@ function addItem(){
           alert("Please enter item name");
           $("#item").focus();
           return;
-     /* }else if(barcode.length == 0 || barcode.replace(/^\s+|\s+$/g, "").length == 0){
-          alert("Please enter item barcode");
-          $("#barcode").focus();
-          return; */
+     }else if(photo.length == 0 || photo.replace(/^\s+|\s+$/g, "").length == 0){
+          alert("Please upload item photo");
+          $("#photo").focus();
+          return;
      }else{
+          var fd = new FormData();
+          var files = $('#photo')[0].files[0];
+          fd.append('photo',files);
+          fd.append('item',item);
+          fd.append('department',department);
+          fd.append('item_category',item_category);
           $.ajax({
                type : "POST",
                url : "../controller/add_item.php",
-               data : {department:department, item_category:item_category, item:item/* , barcode:barcode */},
+               data: fd,
+               contentType: false,
+               processData: false,
+               beforeSend: function(){
+                    $(".info").html("<div class='processing'><div class='loader'></div></div>");
+               },
                success : function(response){
                $(".info").html(response);
                }
@@ -364,7 +377,7 @@ function addItem(){
      }
      // $("#room_category").val('');
      $("#item").val('');
-     $("#barcode").val('');
+     $("#photo").val('');
      $("#item").focus();
      return false;    
 }

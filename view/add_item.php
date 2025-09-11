@@ -34,10 +34,10 @@
                     <label for="item"> Item Name</label>
                     <input type="text" name="item" id="item" required placeholder="Input item name">
                 </div>
-                <!-- <div class="data" style="width:100%; margin:10px 0">
-                    <label for="barcode"> Barcode</label>
-                    <input type="text" name="barcode" id="barcode" value="0"required placeholder="Input item barcode">
-                </div> -->
+                <div class="data" style="width:100%; margin:10px 0">
+                    <label for="photo"> Item Photo</label>
+                    <input type="file" name="photo" id="photo" value="0"required>
+                </div>
             </div>
             <div class="inputs">
                 <div class="data">
