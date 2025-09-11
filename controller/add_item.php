@@ -31,7 +31,7 @@
 
     //check if item already Exist
     $check = new selects();
-    $results = $check->fetch_count_2cond('items', 'category', $category, 'item_name', $item);
+    $results = $check->fetch_count_cond('items', 'item_name', $item);
     if($results > 0){
         echo "<p class='exist'><span>$item</span> already exists</p>";
     }else{

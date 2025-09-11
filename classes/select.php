@@ -39,6 +39,19 @@
                 return $rows;
             }
         }
+        // fetch details like 2 conditions
+        public function fetch_details_like2EqualCond($table, $column1, $column2, $value){
+            $get_user = $this->connectdb()->prepare("SELECT * FROM $table WHERE $column1 LIKE '%$value%' OR $column2 = :$column2");
+            $get_user->bindValue("$column2", $value);
+            $get_user->execute();
+            if($get_user->rowCount() > 0){
+                $rows = $get_user->fetchAll();
+                return $rows;
+            }else{
+                $rows = "No records found";
+                return $rows;
+            }
+        }
         //fetch details with condition
         public function fetch_details_cond($table, $column, $condition){
             $get_user = $this->connectdb()->prepare("SELECT * FROM $table WHERE $column = :$column");

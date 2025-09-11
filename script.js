@@ -381,6 +381,26 @@ function addItem(){
      $("#item").focus();
      return false;    
 }
+//get item to change details
+function getItemDetails(item_name, url){
+     let item = item_name;
+     if(item.length >= 3){
+          if(item){
+               $.ajax({
+                    type : "POST",
+                    url :"../controller/"+url,
+                    data : {item:item},
+                    success : function(response){
+                         $("#sales_item").html(response);
+                    }
+               })
+               return false;
+          }else{
+               $("#sales_item").html("<p>Please enter atleast 3 letters</p>");
+          }
+     }
+     
+}
 // add stores
 function addStore(){
      let store_name = document.getElementById("store_name").value;
