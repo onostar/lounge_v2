@@ -1,14 +1,19 @@
 <?php
 
     $item = htmlspecialchars(stripslashes(($_POST['item'])));
-    $foto = htmlspecialchars(stripslashes(($_POST['pics'])));
     $photo = $_FILES['photo']['name'];
-    $photo_folder = "../../photos/".$photo;
     $photo_size = $_FILES['photo']['size'];
     $allowed_ext = array('png', 'jpg', 'jpeg', 'webp');
     /* get current file extention */
     $file_ext = explode('.', $photo);
     $file_ext = strtolower(end($file_ext));
+    $ran_num ="";
+    for($i = 0; $i < 5; $i++){
+        $random_num = random_int(0, 9);
+        $ran_num .= $random_num;
+    }
+    $foto = $ran_num."_".$item.".".$file_ext;
+    $photo_folder = "../photos/".$foto;
     // instantiate class
     include "../classes/dbh.php";
     include "../classes/update.php";
@@ -42,10 +47,10 @@
                     //return compressed image
                     return $destination;
                 }
-                $compress = compressImage($_FILES['photo']['tmp_name'], $photo_folder, 80);
+                $compress = compressImage($_FILES['photo']['tmp_name'], $photo_folder, 70);
                 if($compress){
                     $update = new Update_table();
-                    $update->update('room_details', $foto, 'room', $photo, $item);
+                    $update->update('items', 'photo', 'item_id', $foto, $item);
                     if($update){
                         echo "<p style='color:#fff;background:green; padding:8px; font-size:.9rem;margin:20px auto;width:80%;text-align:center'>Photo updated successfully</p>";
                     }else{

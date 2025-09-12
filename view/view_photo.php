@@ -1,3 +1,4 @@
+<div id="update_photo">
 <?php
 
     if (isset($_GET['item'])){
@@ -20,7 +21,7 @@
         <section class="addUserForm" style="text-align:left;">
             <div class="inputs" style="flex-wrap:wrap; gap:1rem; align-items:flex-end; justify-content:left;">
                 <!-- <div class="data item_head"> -->
-                    <input type="hidden" name="item_id" id="item_id" value="<?php echo $row->item_id?>" required>
+                    <input type="hidden" name="item" id="item" value="<?php echo $row->item_id?>" required>
                 <div class="data" style="width:35%">
                     <img src="../photos/<?php echo $row->photo?>" alt="<?php echo $row->item_name?>" style="width:100%; height:120px; object-fit:fill; border:1px solid #ccc; padding:4px;">
                 </div>
@@ -29,7 +30,7 @@
                     <input type="file" name="photo" id="photo">
                 </div>
                 <div class="data" style="width:auto">
-                    <button type="submit" id="change_price" name="change_price" onclick="updatePhoto()">Save <i class="fas fa-save"></i></button>
+                    <button type="submit" id="change_price" name="change_price" onclick="updateItemPhoto()">Save <i class="fas fa-save"></i></button>
                     <a href="javascript:void(0)" title="close form" style='background:red; padding:10px; border-radius:5px; color:#fff' onclick="showPage('update_photo.php')">Return <i class='fas fa-angle-double-left'></i></a>
                 </div>
                 
@@ -42,3 +43,5 @@
      }
     }    
 ?>
+
+</div>

@@ -381,6 +381,38 @@ function addItem(){
      $("#item").focus();
      return false;    
 }
+// update photos 
+function updateItemPhoto(){
+     let item = document.getElementById("item").value;
+     let photo = document.getElementById("photo").value;
+     if(photo.length == 0 || photo.replace(/^\s+|\s+$/g, "").length == 0){
+          alert("Please upload item photo");
+          $("#photo").focus();
+          return;
+     }else{
+          var fd = new FormData();
+          var files = $('#photo')[0].files[0];
+          fd.append('photo',files);
+          fd.append('item',item);
+          $.ajax({
+               type : "POST",
+               url : "../controller/update_photo.php",
+               data: fd,
+               contentType: false,
+               processData: false,
+               beforeSend: function(){
+                    $("#update_photo").html("<div class='processing'><div class='loader'></div></div>");
+               },
+               success : function(response){
+               $("#update_photo").html(response);
+               }
+          })
+          setTimeout(function(){
+               $("#update_photo").load("view_photo.php?item="+item+" #update_photo");
+          }, 3000);
+     }
+     return false;    
+}
 //get item to change details
 function getItemDetails(item_name, url){
      let item = item_name;
