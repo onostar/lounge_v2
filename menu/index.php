@@ -46,7 +46,7 @@
             <div class="slides">
                 <div class="slide">
                     <div class="banner_img">
-                        <video autoplay muted loop playsinline poster="images/banner.jpg" width="640" height="360">
+                        <video autoplay muted loop playsinline poster="images/rest_table.jpg" width="640" height="360">
                             <source src="images/intro.mp4" type="video/mp4">
                             <!-- <source src="video.webm" type="video/webm"> 
                             <source src="video.ogg" type="video/ogg"> -->

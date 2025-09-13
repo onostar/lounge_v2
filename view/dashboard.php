@@ -93,7 +93,7 @@
         
     </div>
     <?php
-        }elseif($role == "Server"){
+        }elseif($role == "Barman" || $role == "Kitchen Staff"){
     ?>
    
     <div id="dashboard">
@@ -494,7 +494,7 @@
     </div>
 </div>
 <?php 
-    }elseif($role == "Server"){
+    }elseif($role == "Barman" || $role == "Kitchen Staff"){
 ?>
 <div class="check_out_due">
     <hr>

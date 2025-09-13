@@ -18,7 +18,8 @@
                     <option value="Front Desk">Front Desk Officer</option>
                     <option value="cashier">Cashier</option>
                     <option value="sales rep">Sales Rep</option>
-                    <option value="Server">Server</option>
+                    <option value="Barman">Barman</option>
+                    <option value="Kitchen Staff">Kitchen Staff</option>
                 </select>
                 <select name="store_id" id="store_id" style="padding:10px; border-radius:10px">
                     <option value=""selected required>select store</option>

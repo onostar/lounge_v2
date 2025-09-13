@@ -2882,7 +2882,6 @@ function printSalesOrder(link){
      if(confirmPost){
           let sales_invoice = document.getElementById("sales_invoice").value;
           
-          
           $.ajax({
                type : "POST",
                url : "../controller/"+link,

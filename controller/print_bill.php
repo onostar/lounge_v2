@@ -41,7 +41,7 @@ include "../classes/select.php";
     <div class='receipt_logo'><img src="../images/logo.jpeg" title="logo"></div>
 
 <div class="displays allResults sales_receipt">
-<h2><?php echo $_SESSION['company'];?></h2>
+<h2><?php echo $store_name;?></h2>
     <p><?php echo $address?></p>
     <p>Tel: <?php echo $phone?></p>
     <!-- get sales type -->

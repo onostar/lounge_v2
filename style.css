@@ -3453,6 +3453,7 @@ x
     .logo{
         width:30vw;
         height:4vh;
+        display:none;
     }
     .rms{
          margin-left:0;

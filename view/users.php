@@ -72,15 +72,15 @@ date_default_timezone_set("Africa/Lagos");
                 <a href="javascript:void(0)"><i class="fas fa-bars"></i></a>
             </div>
             <h1 class="logo for_mobile">
-                <a href="users.php" title="Logistics">
+                <a href="users.php" title="logo">
                     <img src="../images/logo.png" alt="Logo" class="img-fluid">
                 </a>
             </h1>
-            <h2 style="margin-left:50px!important"><?php echo $company?></h2>
+            <h2 style="margin-left:50px!important"><?php echo $store?></h2>
             <!-- <div class="other_menu">
                 <a href="#" title="Our Gallery"><?php echo ucwords($role);?></a>
             </div> -->
-            <a href="#" title="current store" class="other_menu"><?php echo ucwords($store);?></a>
+            <!-- <a href="#" title="current store" class="other_menu"><?php echo ucwords($store);?></a> -->
 
             <div class="login">
                 

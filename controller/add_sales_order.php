@@ -3,7 +3,6 @@ date_default_timezone_set("Africa/Lagos");
 
 session_start();
 
-
 // instantiate class
 include "../classes/dbh.php";
 include "../classes/select.php";
