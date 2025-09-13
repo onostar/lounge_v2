@@ -148,6 +148,18 @@
                 return "0";
             }
         }
+        //fetch details count with 2 condition grouped by
+        public function fetch_count_2condGro($table, $column1, $condition1, $column2, $condition2, $group){
+            $get_user = $this->connectdb()->prepare("SELECT * FROM $table WHERE $column1 = :$column1 AND $column2 = :$column2 GROUP BY $group");
+            $get_user->bindValue("$column1", $condition1);
+            $get_user->bindValue("$column2", $condition2);
+            $get_user->execute();
+            if($get_user->rowCount() > 0){
+                return $get_user->rowCount();
+            }else{
+                return "0";
+            }
+        }
         //fetch details count with 2 condition 1 negative
         public function fetch_count_2cond1Neg($table, $column1, $condition1, $column2, $condition2){
             $get_user = $this->connectdb()->prepare("SELECT * FROM $table WHERE $column1 = :$column1 AND $column2 != :$column2");

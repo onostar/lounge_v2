@@ -32,11 +32,11 @@
                         echo $item_name->item_name;
                     ?>
                 </td>
-                <td style="text-align:center; color:red;font-size:1,1rem">
-                    <span style="font-size:1.2rem; margin:0 2px"><?php echo $detail->quantity?></span>
-                    <a style="color:#fff; background:green;border-radius:4px;padding:5px 8px;" href="javascript:void(0)" title="increase quantity" onclick="increaseQtyOrder('<?php echo $detail->sales_id?>', '<?php echo $detail->item?>')"><i class="fas fa-arrow-up"></i></a>
-                    <a style="color:#fff; background:var(--primaryColor);border-radius:4px;padding:5px 8px;" href="javascript:void(0)" title="decrease quantity" onclick="reduceQtyOrder('<?php echo $detail->sales_id?>')"><i class="fas fa-arrow-down"></i></a>
-                    <a style="color:#fff; background:var(--otherColor);border-radius:4px;padding:5px 8px;" href="javascript:void(0)" title="show more options" onclick="showMoreOrder('<?php echo $detail->sales_id?>')"><i class="fas fa-pen"></i></a>
+                <td style="text-align:center; color:red;font-size:.9rem">
+                    <span style="font-size:1.1rem; margin:0 2px"><?php echo $detail->quantity?></span>
+                    <a style="color:#fff; background:green;border-radius:4px;padding:4px 7px;" href="javascript:void(0)" title="increase quantity" onclick="increaseQtyOrder('<?php echo $detail->sales_id?>', '<?php echo $detail->item?>')"><i class="fas fa-arrow-up"></i></a>
+                    <a style="color:#fff; background:var(--primaryColor);border-radius:4px;padding:4px 7px;" href="javascript:void(0)" title="decrease quantity" onclick="reduceQtyOrder('<?php echo $detail->sales_id?>')"><i class="fas fa-arrow-down"></i></a>
+                    <a style="color:#fff; background:var(--otherColor);border-radius:4px;padding:4px 7px;" href="javascript:void(0)" title="show more options" onclick="showMoreOrder('<?php echo $detail->sales_id?>')"><i class="fas fa-pen"></i></a>
                     <!-- <a style="color:#fff; background:var(--secondaryColor);border-radius:4px;padding:5px 8px;" href="javascript:void(0)" title="sell item in pack" onclick="getPackSo('<?php echo $detail->sales_id?>')"><i class="fas fa-box"></i> pack</a> -->
                 </td>
                 <td>

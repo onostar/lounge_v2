@@ -57,7 +57,7 @@ date_default_timezone_set("Africa/Lagos");
     <meta name="keywords" content="Hotel, Lodging, Accomodation, lounge, bar, hotel software, lodging and accomodation software, accounting, hotel software">
     <meta name="description" content="An online/offline hotel and lodging software management system. Developed for the management of guests check in, check out, bills, restaurant, etc">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel & Lounge Management System</title>
+    <title>Lounge & Restaurant Management System</title>
     <link rel="icon" type="image/png" size="32x32" href="../images/icon.png">
     <link rel="stylesheet" href="../fontawesome-free-6.0.0-web/css/all.css">
     <link rel="stylesheet" href="../fontawesome-free-6.0.0-web/css/all.min.css">
@@ -117,7 +117,7 @@ date_default_timezone_set("Africa/Lagos");
                             <p>
                                 <?php
                                     $get_soon_expired = new selects();
-                                    $soon_expired = $get_soon_expired->fetch_count_group('sales', 'sales_status', 1, 'invoice');
+                                    $soon_expired = $get_soon_expired->fetch_count_2cond('sales', 'sales_status', 1, 'store', $store_id, 'invoice');
                                     echo $soon_expired;
                                 ?>
                             </p>

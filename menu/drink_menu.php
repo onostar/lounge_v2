@@ -21,7 +21,7 @@
                         foreach($categories as $cat):
                 ?>
                 <figure onclick="showCategory('<?php echo $cat->category_id?>')">
-                    <img src="images/food_category.jpg" alt="<?php echo $cat->category?>">
+                    <img src="images/drink.webp" alt="<?php echo $cat->category?>" loading="lazy">
                     <figcaption><?php echo $cat->category?></figcaption>
                 </figure>
                 <?php endforeach; }else{
@@ -39,7 +39,7 @@
                         foreach($items as $item):
                 ?>
                 <figure>
-                    <img src="../photos/<?php echo $item->photo?>" alt="<?php echo $item->item_name?>">
+                    <img src="../photos/<?php echo $item->photo?>" alt="<?php echo $item->item_name?>" loading="lazy">
                     <figcaption>
                         <h4><?php echo $item->item_name?></h4>
                         <p><?php echo "₦".number_format($item->sales_price, 2);?></p>

@@ -524,7 +524,7 @@ nav ul li ul a:hover i{
 }
 .taglines a{
     padding:15px;
-    background:transparent;
+    background:#222;
     color:#fff;
     border:1px solid #fff;
     display:inline-block;
@@ -5777,6 +5777,21 @@ header i{
     border:none;
     box-shadow: none;
 }
+.processing .loader {
+    border: 18px solid #cecaca;
+    border-top-color: var(--tertiaryColor);
+    border-radius: 50%;
+    /* background: transparent; */
+    width: 80px;
+    height: 80px;
+    margin:10px auto;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 @media screen and (max-width: 800px){
     .construction{
         position:relative;
@@ -7252,7 +7267,7 @@ header i{
         height:120px;
     }
     #menu_items .menu_item figure img{
-        width:40%;
+        width:35%;
         height:100%;
 
     }

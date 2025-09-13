@@ -2075,6 +2075,9 @@ function addSalesOrder(item_id){
      $.ajax({
           type : "GET",
           url : "../controller/add_sales_order.php?sales_item="+item+"&invoice="+invoice+"&order="+add_order+"&waiter="+order_by,
+          beforeSend: function(){
+               $(".sales_order").html("<div class='processing'><div class='loading'></div></div>");
+          },
           success : function(response){
                $(".sales_order").html(response);
           }
@@ -2884,6 +2887,9 @@ function printSalesOrder(link){
                type : "POST",
                url : "../controller/"+link,
                data : {sales_invoice:sales_invoice},
+               beforeSend: function(){
+                    $("#sales_order").html("<div class='processing'><div class='loading'></div></div>");
+               },
                success : function(response){
                     $("#sales_order").html(response);
                }

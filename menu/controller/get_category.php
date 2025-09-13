@@ -20,7 +20,7 @@
                 foreach($rows as $row){
     ?>      
             <figure>
-                <img src="../photos/<?php echo $row->photo?>" alt="<?php echo $row->item_name?>">
+                <img src="../photos/<?php echo $row->photo?>" alt="<?php echo $row->item_name?>" loading="lazy">
                 <figcaption>
                     <h4><?php echo $row->item_name?></h4>
                     <p><?php echo "₦".number_format($row->sales_price, 2);?></p>
