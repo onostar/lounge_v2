@@ -21,7 +21,7 @@
                         foreach($categories as $cat):
                 ?>
                 <figure onclick="showCategory('<?php echo $cat->category_id?>')">
-                    <img src="images/food_category.jpg" alt="<?php echo $cat->category?>" loading="lazy">
+                    <img src="images/food_category.jpg" alt="<?php echo $cat->category?>">
                     <figcaption><?php echo $cat->category?></figcaption>
                 </figure>
                 <?php endforeach; }else{
