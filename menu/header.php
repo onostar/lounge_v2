@@ -29,7 +29,7 @@
         <header id="mainHeader" class="new_header" style="position:fixed;">
             <h1>
                 <a href="index.php" id="logos">
-                    <img src="images/logo.png" alt="The Residence Social House">
+                    <img src="images/logo.jpg" alt="The Residence Social House">
                 </a>
             </h1>
             <nav id="navigation">

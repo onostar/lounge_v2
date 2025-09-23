@@ -38,7 +38,7 @@ include "../classes/select.php";
             $posted_date = $dt->post_date;
         }       
 ?>
-    <div class='receipt_logo'><img src="../images/logo.jpeg" title="logo"></div>
+    <div class='receipt_logo'><img src="../images/logo.jpg" title="logo"></div>
 
 <div class="displays allResults sales_receipt">
 <h2><?php echo $store_name;?></h2>

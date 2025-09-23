@@ -37,7 +37,7 @@
         <header id="mainHeader" class="main_header">
             <h1>
                 <a href="index.php" id="logos">
-                    <img src="images/logo.png" alt="The Residence Social House">
+                    <img src="../images/logo.jpg" alt="The Residence Social House">
                 </a>
             </h1>
             

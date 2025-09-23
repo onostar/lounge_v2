@@ -215,7 +215,7 @@ button a:hover{
     display:flex;
     justify-content: space-between;
     align-items:center;
-    background:rgba(0, 0, 0, .9);
+    background:rgb(0, 0, 0);
     z-index:3;
     padding:2px;
     min-height:12vh;
