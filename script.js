@@ -3252,7 +3252,7 @@ function printSalesTicket(invoice){
           }
      }) */
      setTimeout(function(){
-          $("#staff_list").load("new_order.php #staff_list");
+          $("#postSales").load("print_docket.php #postSales");
      }, 100);
      return false;
  
